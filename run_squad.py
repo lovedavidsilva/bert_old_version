@@ -272,9 +272,6 @@ def read_squad_examples(input_file, is_training):
             answer_offset = answer["answer_start"]
             answer_length = len(orig_answer_text)
             start_position = char_to_word_offset[answer_offset]
-            print(paragraph_text,question_text)
-            print(len(char_to_word_offset))
-            print(answer_offset + answer_length-1)
             end_position = char_to_word_offset[answer_offset + answer_length -
                                                1]
             # Only add answers where the text can be exactly recovered from the
